@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
-}
+.continentZone {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
+  .continent-select {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 16px;
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+    label {
+      font-size: 24px;
+    }
+
+    padding: 8px 16px;
+    border-radius: 100px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+
+    .go-button {
+      border-image: unset;
+      background-color: transparent;
+      border: 1px solid white;
+      border-radius: 100px;
+      height: 32px;
+      width: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .go-button-icon {
+        color: white;
+        width: 24px;
+        height: 24px;
+        transition: transform 0.5s;
+      }
+
+      &:hover {
+        background-color: white;
+
+        .go-button-icon {
+          color: black;
+          transform: scale(1.1);
+        }
+      }
+    }
   }
-  to {
-    transform: rotate(360deg);
+
+  .continents-accordion {
+    position: absolute;
+    z-index: 1;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

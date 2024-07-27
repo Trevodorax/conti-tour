@@ -1,0 +1,56 @@
+.select-trigger {
+  display: flex;
+  gap: 8px;
+  background-color: transparent;
+  border-color: transparent;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-weight: bold;
+  width: 240px;
+  color: white;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  .select-value {
+    font-size: 24px;
+  }
+
+  .dropDownIcon {
+    height: 24px;
+    width: 24px;
+  }
+}
+
+.select-content {
+  color: white;
+  padding: 8px 16px 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 2;
+  width: 240px;
+
+  .select-item {
+    &:hover {
+      outline: none;
+      .select-item-text {
+        text-decoration: underline;
+      }
+    }
+    &:focus {
+      outline: none;
+    }
+    .select-item-text {
+      font-size: 24px;
+      text-align: center;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+  }
+}

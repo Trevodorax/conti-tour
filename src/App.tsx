@@ -1,34 +1,35 @@
+import { ChevronRightIcon } from "@radix-ui/react-icons";
+import * as Label from "@radix-ui/react-label";
 import { useState } from "react";
-import viteLogo from "/vite.svg";
-import reactLogo from "./assets/react.svg";
 import "./App.css";
+import {
+  ContinentCarousel,
+  type continentId,
+} from "./components/continentCarousel/ContinentCarousel";
+import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectedContinentId, setSelectedContinentId] =
+    useState<continentId>("africa");
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button type="button" onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="continentZone">
+      <div className="continent-select">
+        <Label.Root htmlFor="continent-select">Explore</Label.Root>
+        <ContinentSelector
+          selectedContinentId={selectedContinentId}
+          setSelectedContinentId={setSelectedContinentId}
+        />
+        <button className="go-button">
+          <ChevronRightIcon className="go-button-icon" />
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <ContinentSelector
+        selectedContinentId={selectedContinentId}
+        setSelectedContinentId={setSelectedContinentId}
+      />
+      <ContinentCarousel selectedContinentId={selectedContinentId} />
+    </div>
   );
 }
 
