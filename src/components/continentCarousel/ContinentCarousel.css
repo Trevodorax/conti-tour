@@ -4,7 +4,6 @@
   height: 100vh;
   overflow-x: hidden;
   justify-content: flex-start;
-  border-radius: 4px;
 
   .continent-image-container {
     min-width: 0;

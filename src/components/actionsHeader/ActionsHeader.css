@@ -1,0 +1,40 @@
+.actions-header {
+  position: absolute;
+  z-index: 2;
+  height: 64px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 24px;
+
+  .icon {
+    width: 32px;
+    height: 32px;
+    color: white;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .round-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+      cursor: pointer;
+    }
+
+    .icon {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}
