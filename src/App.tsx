@@ -1,13 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import { ActionsHeader } from "./components/actionsHeader/ActionsHeader";
+import { ConceptPresentation } from "./components/conceptPresentation/ConceptPresentation";
 import {
   ContinentCarousel,
   type continentId,
 } from "./components/continentCarousel/ContinentCarousel";
 import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
 import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
-import { ConceptPresentation } from "./components/conceptPresentation/ConceptPresentation";
 
 function App() {
   const [selectedContinentId, setSelectedContinentId] =
