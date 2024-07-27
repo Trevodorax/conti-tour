@@ -1,5 +1,3 @@
-import { ChevronRightIcon } from "@radix-ui/react-icons";
-import * as Label from "@radix-ui/react-label";
 import { useState } from "react";
 import "./App.css";
 import {
@@ -7,6 +5,7 @@ import {
   type continentId,
 } from "./components/continentCarousel/ContinentCarousel";
 import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
+import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
 
 function App() {
   const [selectedContinentId, setSelectedContinentId] =
@@ -14,16 +13,10 @@ function App() {
 
   return (
     <div className="continentZone">
-      <div className="continent-select">
-        <Label.Root htmlFor="continent-select">Explore</Label.Root>
-        <ContinentSelector
-          selectedContinentId={selectedContinentId}
-          setSelectedContinentId={setSelectedContinentId}
-        />
-        <button className="go-button">
-          <ChevronRightIcon className="go-button-icon" />
-        </button>
-      </div>
+      <ContinentSelectionCta
+        selectedContinentId={selectedContinentId}
+        setSelectedContinentId={setSelectedContinentId}
+      />
       <ContinentSelector
         selectedContinentId={selectedContinentId}
         setSelectedContinentId={setSelectedContinentId}
