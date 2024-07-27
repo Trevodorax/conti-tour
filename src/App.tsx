@@ -7,6 +7,7 @@ import {
 } from "./components/continentCarousel/ContinentCarousel";
 import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
 import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
+import { ConceptPresentation } from "./components/conceptPresentation/ConceptPresentation";
 
 function App() {
   const [selectedContinentId, setSelectedContinentId] =
@@ -27,7 +28,7 @@ function App() {
         <ContinentCarousel selectedContinentId={selectedContinentId} />
       </div>
       <div className="concept-presentation">
-        <div></div>
+        <ConceptPresentation />
       </div>
     </div>
   );
