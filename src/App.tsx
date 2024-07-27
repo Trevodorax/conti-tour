@@ -25,7 +25,10 @@ function App() {
           selectedContinentId={selectedContinentId}
           setSelectedContinentId={setSelectedContinentId}
         />
-        <ContinentCarousel selectedContinentId={selectedContinentId} />
+        <ContinentCarousel
+          selectedContinentId={selectedContinentId}
+          setSelectedContinentId={setSelectedContinentId}
+        />
       </div>
       <div className="concept-presentation">
         <ConceptPresentation />

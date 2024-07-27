@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import type { FC } from "react";
+import { type FC, useEffect } from "react";
 import africaBackgroundImage from "/africa.jpg";
 import asiaBackgroundImage from "/asia.jpg";
 import europeBackgroundImage from "/europe.jpg";
@@ -59,9 +59,26 @@ export function getContinentById(continentId: continentId) {
 
 interface Props {
   selectedContinentId: continentId;
+  setSelectedContinentId: (continentId: continentId) => void;
 }
 
-export const ContinentCarousel: FC<Props> = ({ selectedContinentId }) => {
+export const ContinentCarousel: FC<Props> = ({
+  selectedContinentId,
+  setSelectedContinentId,
+}) => {
+  // scroll every 5 seconds
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      const currentIndex = continents.findIndex(
+        (continent) => continent.id === selectedContinentId
+      );
+      const nextIndex = (currentIndex + 1) % continents.length;
+      setSelectedContinentId(continents[nextIndex].id);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [selectedContinentId, setSelectedContinentId]);
+
   return (
     <div className="continents-accordion">
       {continents.map((continent) => (
