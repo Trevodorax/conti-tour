@@ -8,6 +8,7 @@ import {
 } from "./components/continentCarousel/ContinentCarousel";
 import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
 import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
+import { Link } from "@tanstack/react-router";
 
 function App() {
   const [selectedContinentId, setSelectedContinentId] =
@@ -32,6 +33,9 @@ function App() {
       </div>
       <div className="concept-presentation">
         <ConceptPresentation />
+        <Link to="/about" className="[&.active]:font-bold">
+            Home
+        </Link>{' '}
       </div>
     </div>
   );
