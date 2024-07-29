@@ -1,0 +1,34 @@
+:root {
+    --color-africa: #c0864c;
+    --color-asia: #d4b300;
+    --color-europe: #3353a1;
+    --color-north-america: #00a6a1;
+    --color-south-america: #29a329;
+    --color-oceania: #cc3700;
+
+    #theme-provider {
+        &[data-theme="africa"] {
+            --color-primary: var(--color-africa);
+        }
+
+        &[data-theme="asia"] {
+            --color-primary: var(--color-asia);
+        }
+
+        &[data-theme="europe"] {
+            --color-primary: var(--color-europe);
+        }
+
+        &[data-theme="north-america"] {
+            --color-primary: var(--color-north-america);
+        }
+
+        &[data-theme="south-america"] {
+            --color-primary: var(--color-south-america);
+        }
+
+        &[data-theme="oceania"] {
+            --color-primary: var(--color-oceania);
+        }
+    }
+}

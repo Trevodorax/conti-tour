@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import { ActionsHeader } from "./components/actionsHeader/ActionsHeader";
 import { ConceptPresentation } from "./components/conceptPresentation/ConceptPresentation";
@@ -9,10 +9,17 @@ import {
 import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
 import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
 import { Link } from "@tanstack/react-router";
+import { useTheme } from "./contexts/internalContexts/themeContext";
 
 function App() {
   const [selectedContinentId, setSelectedContinentId] =
     useState<continentId>("africa");
+  
+  const {setTheme} = useTheme();
+  
+  useEffect(() => {
+    setTheme(selectedContinentId);
+  }, [selectedContinentId]);
 
   return (
     <div className="landing-page">
