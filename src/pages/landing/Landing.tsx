@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
-import "./App.css";
-import { ActionsHeader } from "./components/actionsHeader/ActionsHeader";
-import { ConceptPresentation } from "./components/conceptPresentation/ConceptPresentation";
-import {
-  ContinentCarousel,
-  type continentId,
-} from "./components/continentCarousel/ContinentCarousel";
-import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
-import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
 import { Link } from "@tanstack/react-router";
-import { useTheme } from "./contexts/internalContexts/themeContext";
+import { useState, useEffect } from "react";
+import { ActionsHeader } from "../../components/actionsHeader/ActionsHeader";
+import { ConceptPresentation } from "../../components/conceptPresentation/ConceptPresentation";
+import { continentId, ContinentCarousel } from "../../components/continentCarousel/ContinentCarousel";
+import { ContinentSelectionCta } from "../../components/continentSelectionCta/ContinentSelectionCta";
+import { ContinentSelector } from "../../components/continentSelector/ContinentSelector";
+import { useTheme } from "../../contexts/internalContexts/themeContext";
+import './Landing.css';
 
-function App() {
+export const Landing = () => {
   const [selectedContinentId, setSelectedContinentId] =
     useState<continentId>("africa");
   
@@ -47,5 +44,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
