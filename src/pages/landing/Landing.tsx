@@ -1,10 +1,10 @@
 import { Link } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
 import { ActionsHeader } from "../../components/actionsHeader/ActionsHeader";
-import { ConceptPresentation } from "../../components/conceptPresentation/ConceptPresentation";
-import { continentId, ContinentCarousel } from "../../components/continentCarousel/ContinentCarousel";
-import { ContinentSelectionCta } from "../../components/continentSelectionCta/ContinentSelectionCta";
-import { ContinentSelector } from "../../components/continentSelector/ContinentSelector";
+import { ConceptPresentation } from "./components/conceptPresentation/ConceptPresentation";
+import { continentId, ContinentCarousel } from "./components/continentCarousel/ContinentCarousel";
+import { ContinentSelectionCta } from "./components/continentSelectionCta/ContinentSelectionCta";
+import { ContinentSelector } from "./components/continentSelector/ContinentSelector";
 import { useTheme } from "../../contexts/internalContexts/themeContext";
 import './Landing.css';
 

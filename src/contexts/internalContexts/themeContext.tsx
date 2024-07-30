@@ -1,5 +1,5 @@
 import { type ReactNode, createContext, useContext, useState } from "react";
-import { continentId } from "../../components/continentCarousel/ContinentCarousel";
+import { continentId } from "../../pages/landing/components/continentCarousel/ContinentCarousel";
 
 interface ThemeContextProps {
     setTheme: (theme: continentId) => void;
