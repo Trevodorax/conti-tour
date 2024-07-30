@@ -37,7 +37,7 @@ export const Landing = () => {
       </div>
       <div className="concept-presentation">
         <ConceptPresentation />
-        <Link to="/about" className="[&.active]:font-bold">
+        <Link to="/continent" className="[&.active]:font-bold">
             Home
         </Link>{' '}
       </div>
